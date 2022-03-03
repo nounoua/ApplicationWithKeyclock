@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un produit : </h2>
+    </div>
+    <form (ngSubmit)="addProduit()">
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Nom produit</label>
+            <input type="text" [(ngModel)]="newProduit.name" name="nomProduit" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Description du produit</label>
+            <input type="text" [(ngModel)]="newProduit.desc" name="descProduit" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix produit</label>
+            <input type="text" [(ngModel)]="newProduit.price" name="priceProduit" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" routerLink="/add-produit" (click)="addProduit()" class="btn btn-success">Ajouter
+                produit</button>
+            <div>
+                <h3>{{message}}</h3>
+            </div>
+        </div>
+    </form>
+</div>
